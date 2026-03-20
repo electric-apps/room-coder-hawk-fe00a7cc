@@ -22,6 +22,7 @@ export const todosCollection = createCollection(
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(todo),
 			});
+			if (!res.ok) throw new Error(`Insert failed: ${res.status} ${res.statusText}`);
 			const data = await res.json();
 			return { txid: data.txid };
 		},
@@ -32,6 +33,7 @@ export const todosCollection = createCollection(
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(todo),
 			});
+			if (!res.ok) throw new Error(`Update failed: ${res.status} ${res.statusText}`);
 			const data = await res.json();
 			return { txid: data.txid };
 		},
@@ -42,6 +44,7 @@ export const todosCollection = createCollection(
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({ id }),
 			});
+			if (!res.ok) throw new Error(`Delete failed: ${res.status} ${res.statusText}`);
 			const data = await res.json();
 			return { txid: data.txid };
 		},

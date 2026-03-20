@@ -26,10 +26,8 @@ describe("todos collection validation", () => {
 		}
 	})
 
-	it("rejects todo with empty text", () => {
+	it("rejects todo with null text", () => {
 		const row = generateValidRow(todoSelectSchema)
-		;(row as Record<string, unknown>).text = ""
-		// Empty string is still a valid string, but let's check null fails
 		;(row as Record<string, unknown>).text = null
 		const result = todoSelectSchema.safeParse(row)
 		expect(result.success).toBe(false)
