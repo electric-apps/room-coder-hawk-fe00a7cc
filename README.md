@@ -1,43 +1,32 @@
-# Kyle's Stack
+# Todo App
 
-A starter for building apps with TanStack Start, Radix UI, and capsize typography — with [`@tanstack/intent`](https://github.com/TanStack/intent) skills pre-installed for **Electric**, **TanStack DB**, and **Durable Streams**.
+A real-time, reactive todo application powered by Electric SQL. Changes sync instantly across all connected clients.
 
-## Quick Start
+## Features
+
+- Add todos with a text input
+- Mark todos as complete/incomplete with a checkbox
+- Delete todos with a single click
+- Real-time sync — changes appear instantly across all browser tabs and devices
+- Optimistic updates for a snappy, responsive feel
+
+## How to Run
 
 ```bash
-npx gitpick KyleAMathews/kpb my-app
-cd my-app
 pnpm install
-pnpm dev
+pnpm dev:start
 ```
 
-## Included Skills
+The app will be available at `http://localhost:8080`.
 
-This starter comes with skills pre-installed. Just ask your coding agent:
+## Tech Stack
 
-**Electric** — Sync Postgres to your app
-- "Set up Electric sync for my Postgres database"
-- "Run the Electric security checklist"
-
-**TanStack DB** — Reactive client-side data
-- "Add a TanStack DB collection for the users table"
-- "Set up live queries for my todos"
-
-**Durable Streams** — Real-time state sync
-- "Set up a Durable Streams dev environment"
-- "Add presence tracking to my app"
-
-**Radix + Capsize** — Typography
-- "Switch to the Playfair theme"
-- "Show me more font theme options"
-
-## What's Included
-
-- **TanStack Start** - Full-stack React framework
-- **Radix UI** - Accessible components with themes
-- **Capsize typography** - Pixel-perfect text rendering
-- **Dozens of font pairings included** - Ask the agent to set one up
-- **Biome** - Fast linting and formatting
+- **Electric SQL** — Postgres-to-client real-time sync via shapes
+- **TanStack DB** — Reactive collections, live queries, and optimistic mutations
+- **Drizzle ORM** — Type-safe schema definitions and migrations
+- **TanStack Start** — React meta-framework with SSR and server functions
+- **Radix UI Themes** — Accessible, themeable component library
+- **Vite** — Fast development server and build tool
 
 ## License
 
